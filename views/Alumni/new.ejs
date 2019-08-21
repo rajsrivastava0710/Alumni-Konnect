@@ -1,0 +1,55 @@
+<% include ../partials/header %>
+
+<div class='container'>
+<div style='width:70%;margin:auto;' class='row'>
+	<h1 style='text-align:center;margin-bottom: 20px;' id='frm-head'>Create new Alumni Entry</h1>
+<div id='frm-width'>
+<form action = "/alumni" method='POST'>
+<div class='form-group'>	<label> E-Mail ID:</label>
+	<input class='form-control' type='email' placeholder='EMAIL-ID' name='alumni[email]' value= <%= user %> disabled>
+</div> 
+<div class='form-group'>	<label> Name:</label>
+	<input class='form-control' type='text' placeholder='Name' name='alumni[name]'>
+</div>
+<div class='form-group'>	<label> Image URL:</label>
+	<input class='form-control' type='text' placeholder='Image Link' name='alumni[image]' value='https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-05-03/178172234645_730ac1a261d34e4f358d_512.png'>
+</div>
+<div class='form-group'>	<label> Roll Number:</label>
+	<input class='form-control' type='Number' placeholder='Roll No.' name='alumni[roll]'>
+</div>
+<div class='form-group' id='onborder'>
+	<label> Branch:</label>
+<div style='border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 10px;'>
+	<input  type='radio' name='alumni[branch]' value='Computer Science & Engineering' required><span id='radiodis'> CSE</span><br>
+    <input  type='radio' name='alumni[branch]' value='Information Technology'><span id='radiodis'> IT</span><br>
+	<input  type='radio' name='alumni[branch]' value='Mechanical Engineering'><span id='radiodis'> ME</span><br>
+	<input  type='radio' name='alumni[branch]' value='Electrical Engineering'><span id='radiodis'> EE</span><br>
+	<input  type='radio' name='alumni[branch]' value='Electronics Engineering'><span id='radiodis'> EL</span><br>
+	<input  type='radio' name='alumni[branch]' value='Civil Engineering'><span id='radiodis'> CE</span><br>
+</div>
+</div>
+<div class='form-group'>	<label> Mobile Number:</label>
+	<input class='form-control' type='number' placeholder='Mobile Number' name='alumni[mobile]' size="10" title="You can enter only 10 digits..." required>
+</div>
+<div class='form-group'>	<label> Github:</label>
+	<input class='form-control' type='text' placeholder="Github Profile Username" name='alumni[github]' required>
+</div>
+<div class='form-group'>	<label> Facebook:</label>
+	<input class='form-control' type='text' placeholder="Facebook Profile Username" name='alumni[facebook]' >
+</div>
+<div class='form-group'>	<label> LinkedIn:</label>
+	<input class='form-control' type='text' placeholder="LinkedIn Profile Username" name='alumni[linkedin]' >
+</div>
+<div class='form-group'>	<label> A Short Bio:</label>
+	<textarea placeholder='Enter your bio in brief!' name='alumni[bio]' cols='8' style='width:100%;height: 120px; border: 2px solid #515263de;padding:5px;border-radius: 5px;'></textarea>
+</div>
+<div class='form-group'>
+	<button class='btn btn-lg btn-primary btn-block'>Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<% include ../partials/footer %>
